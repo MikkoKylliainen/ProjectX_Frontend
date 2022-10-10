@@ -20,3 +20,8 @@ D:\bootcamp_example\ProjectX_Frontend\obj\Debug\ProjectX_Frontend.csproj.Generat
 D:\bootcamp_example\ProjectX_Frontend\obj\Debug\ProjectX_Frontend.csproj.CoreCompileInputs.cache
 D:\bootcamp_example\ProjectX_Frontend\obj\Debug\SwitchingViewsMVVM.exe
 D:\bootcamp_example\ProjectX_Frontend\obj\Debug\SwitchingViewsMVVM.pdb
+D:\bootcamp_example\ProjectX_Frontend\obj\Debug\Views\LoginView.g.cs
+D:\bootcamp_example\ProjectX_Frontend\obj\Debug\Views\LoginView.baml
+D:\bootcamp_example\ProjectX_Frontend\bin\Debug\Newtonsoft.Json.dll
+D:\bootcamp_example\ProjectX_Frontend\bin\Debug\Newtonsoft.Json.xml
+D:\bootcamp_example\ProjectX_Frontend\obj\Debug\ProjectX_Frontend.csproj.CopyComplete

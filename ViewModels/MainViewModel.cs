@@ -27,5 +27,6 @@ namespace ProjectX_Frontend.ViewModels
         {
             UpdateViewCommand = new UpdateViewCommand(this);
         }
+
     }
 }

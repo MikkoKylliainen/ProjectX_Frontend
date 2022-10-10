@@ -34,6 +34,10 @@ namespace ProjectX_Frontend.Commands
             {
                 viewModel.SelectedViewModel = new AccountViewModel();
             }
+            else if (parameter.ToString() == "Login")
+            {
+                viewModel.SelectedViewModel = new LoginViewModel();
+            }
         }
     }
 }
