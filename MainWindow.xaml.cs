@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using static System.Net.Mime.MediaTypeNames;
+using ProjectX_Frontend;
 
 namespace ProjectX_Frontend
 {
@@ -26,12 +27,21 @@ namespace ProjectX_Frontend
         {
             InitializeComponent();
 
-
             DataContext = new MainViewModel();
-            // btnLogin.Visibility = Visibility.Collapsed;
-
+            menuHome.Visibility = Visibility.Collapsed;
+            menuAccount.Visibility = Visibility.Collapsed;
         }
 
+        public void ShowMenu()
+        {
+
+            // BLLIB-message toimii mutta ei visibility? TSEKKAA TÄÄ MAINWINDOW
+
+            var mainWindow = App.Current.Windows.OfType<MainWindow>().FirstOrDefault();
+            if (mainWindow != null)
+                mainWindow.menuHome.Visibility = Visibility.Visible;
+                mainWindow.menuAccount.Visibility = Visibility.Visible;
+        }
         private void menuHome_MouseEnter(object sender, MouseEventArgs e)
         {
             menuHome.Background = new SolidColorBrush(Color.FromArgb(255, 34, 52, 82));
@@ -47,14 +57,6 @@ namespace ProjectX_Frontend
         private void menuAccount_MouseLeave(object sender, MouseEventArgs e)
         {
             menuAccount.Background = new SolidColorBrush(Color.FromArgb(255, 44, 125, 255));
-        }
-        private void menuLogin_MouseEnter(object sender, MouseEventArgs e)
-        {
-            menuLogin.Background = new SolidColorBrush(Color.FromArgb(255, 34, 52, 82));
-        }
-        private void menuLogin_MouseLeave(object sender, MouseEventArgs e)
-        {
-            menuLogin.Background = new SolidColorBrush(Color.FromArgb(255, 44, 125, 255));
         }
     }
 }

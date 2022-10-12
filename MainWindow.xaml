@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectX_Frontend"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="BestAppEver" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -15,7 +15,6 @@
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
             <Button x:Name="menuHome"  Width="200" Content="Home" Command="{Binding UpdateViewCommand}" CommandParameter="Home" Height="45" Background="#FF2C7DFF"  Foreground="White" BorderBrush="#FF4269A9" FontSize="24"  MouseEnter="menuHome_MouseEnter" MouseLeave="menuHome_MouseLeave" />
             <Button x:Name="menuAccount" Width="200" Content="Account" Command="{Binding UpdateViewCommand}" CommandParameter="Account" FontSize="24" Background="#FF2C7DFF" Foreground="White" BorderBrush="#FF4269A9"  MouseEnter="menuAccount_MouseEnter" MouseLeave="menuAccount_MouseLeave"/>
-            <Button x:Name="menuLogin"  Width="200" Content="Login" Command="{Binding UpdateViewCommand}" CommandParameter="Login" Background="#FF2C7DFF" Foreground="White" FontSize="24" Height="45" BorderBrush="#FF4169A9"  MouseEnter="menuLogin_MouseEnter" MouseLeave="menuLogin_MouseLeave"/>
         </StackPanel>
 
         <ContentControl Content="{Binding SelectedViewModel}"/>

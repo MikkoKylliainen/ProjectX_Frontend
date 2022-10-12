@@ -25,3 +25,5 @@ D:\bootcamp_example\ProjectX_Frontend\obj\Debug\Views\LoginView.baml
 D:\bootcamp_example\ProjectX_Frontend\bin\Debug\Newtonsoft.Json.dll
 D:\bootcamp_example\ProjectX_Frontend\bin\Debug\Newtonsoft.Json.xml
 D:\bootcamp_example\ProjectX_Frontend\obj\Debug\ProjectX_Frontend.csproj.CopyComplete
+D:\bootcamp_example\ProjectX_Frontend\obj\Debug\RegisterView.g.cs
+D:\bootcamp_example\ProjectX_Frontend\obj\Debug\RegisterView.baml

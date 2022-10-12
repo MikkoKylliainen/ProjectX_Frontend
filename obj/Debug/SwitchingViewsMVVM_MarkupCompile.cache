@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\bootcamp_example\ProjectX_Frontend\App.xaml
-4329065809
+584485947
 
-15-34085451
+16-575424633
 16-1651850482
-MainWindow.xaml;Views\AccountView.xaml;Views\LoginView.xaml;Views\HomeView.xaml;
+MainWindow.xaml;RegisterView.xaml;Views\AccountView.xaml;Views\LoginView.xaml;Views\HomeView.xaml;
 
-False
+True
 

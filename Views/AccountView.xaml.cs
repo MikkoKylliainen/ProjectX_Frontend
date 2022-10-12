@@ -26,25 +26,6 @@ namespace ProjectX_Frontend.Views
         {
             InitializeComponent();
 
-            UpdateClockAngles();
-
-            DispatcherTimer timer = new DispatcherTimer();
-            timer.Interval = new TimeSpan(0, 0, 1);
-            timer.Tick += Timer_Tick;
-            timer.Start();
-        }
-
-        private void Timer_Tick(object sender, EventArgs e)
-        {
-            UpdateClockAngles();
-        }
-
-        private void UpdateClockAngles()
-        {
-            PART_HourLine.RenderTransform = new RotateTransform((DateTime.Now.Hour / 24.0) * 360, 0.5, 0.5);
-            PART_MinuteLine.RenderTransform = new RotateTransform((DateTime.Now.Minute / 60.0) * 360, 0.5, 0.5);
-            PART_SecondLine.RenderTransform = new RotateTransform((DateTime.Now.Second / 60.0) * 360, 0.5, 0.5);
-
         }
     }
 }

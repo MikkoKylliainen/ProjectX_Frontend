@@ -1,4 +1,5 @@
 ﻿using ProjectX_Frontend.ViewModels;
+using ProjectX_Frontend.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,11 +11,20 @@ namespace ProjectX_Frontend.Commands
 {
     public class UpdateViewCommand : ICommand
     {
+        public UpdateViewCommand()
+        {
+        }
         private MainViewModel viewModel;
+        private string v;
 
         public UpdateViewCommand(MainViewModel viewModel)
         {
             this.viewModel = viewModel;
+        }
+
+        public UpdateViewCommand(string v)
+        {
+            this.v = v;
         }
 
         public event EventHandler CanExecuteChanged;
@@ -24,7 +34,16 @@ namespace ProjectX_Frontend.Commands
             return true;
         }
 
-        public void Execute(object parameter)
+        public void ShowHome ()
+        {
+            //viewModel.SelectedViewModel = new HomeViewModel();
+
+            //UpdateViewCommand UpdateViewCommand = new UpdateViewCommand("Home");
+            //string testing = "Home";
+            //object obj = testing;
+            //Execute(obj);
+        }
+        public void Execute(string parameter)
         {
             if(parameter.ToString() == "Home")
             {

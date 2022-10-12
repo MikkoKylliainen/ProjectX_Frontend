@@ -10,7 +10,7 @@ namespace ProjectX_Frontend.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
-        private BaseViewModel _selectedViewModel;
+        private BaseViewModel _selectedViewModel = new LoginViewModel();
         public BaseViewModel SelectedViewModel
         {
             get { return _selectedViewModel; }

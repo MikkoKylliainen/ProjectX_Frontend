@@ -19,12 +19,12 @@ using System.Windows.Data;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Windows.Markup;
+using ProjectX_Frontend;
+using ProjectX_Frontend.Commands;
+using ProjectX_Frontend.ViewModels;
 
 namespace ProjectX_Frontend.Views
 {
-    /// <summary>
-    /// Interaction logic for HomeView.xaml
-    /// </summary>
     public partial class LoginView : UserControl
     {
         public LoginView()
@@ -32,7 +32,7 @@ namespace ProjectX_Frontend.Views
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        public void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             string username = txtUsername.Text;
             string password = txtPassword.Password;
@@ -43,14 +43,36 @@ namespace ProjectX_Frontend.Views
 
             if (data.Result.Length > 0 && data.Result != "false")
             {
-                JObject j = JObject.Parse(data.Result);
-                var resUsername = j["username"].ToString() + " logged in";
+                /*
+                DataContext = new HomeView();
+                var viewModel = (UpdateViewCommand)DataContext;
+                if (viewModel.CanExecute(null))
+                    viewModel.Execute(null);
+                */
 
-                MessageBox.Show(resUsername);
+
+                JObject j = JObject.Parse(data.Result);
+                var resUsername = j["username"].ToString();
+
+                MainWindow MainWindow = new MainWindow();
+
+                MainWindow.ShowMenu();
+
+
+
+
             }
             else
             {
+                MainWindow MainWindow = new MainWindow();
                 MessageBox.Show("Login failed");
+
+                // UpdateViewCommand.ShowHome();
+
+                UpdateViewCommand updateViewCommand = new UpdateViewCommand();
+                UpdateViewCommand.Execute("Home");
+
+                //viewModel.SelectedViewModel = new HomeViewModel();
             }
         }
 
@@ -59,7 +81,7 @@ namespace ProjectX_Frontend.Views
             string base_url = "https://localhost:7080/api";
             var response = string.Empty;
             var url = base_url + "/Login";
-            User objectUser = new User(u, p);
+            User objectUser = new User(u, p, "");
 
             var json = JsonConvert.SerializeObject(objectUser);
             var postData = new StringContent(json, Encoding.UTF8, "application/json");
@@ -70,5 +92,10 @@ namespace ProjectX_Frontend.Views
             return response;
         }
 
+        private void btnRegisterWindowClick(object sender, RoutedEventArgs e)
+        {
+            RegisterView objectRegisterView = new RegisterView();
+            objectRegisterView.ShowDialog();
+        }
     }
 }
