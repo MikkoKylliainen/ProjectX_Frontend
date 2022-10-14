@@ -22,6 +22,7 @@ using System.Windows.Markup;
 using ProjectX_Frontend;
 using ProjectX_Frontend.Commands;
 using ProjectX_Frontend.ViewModels;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace ProjectX_Frontend.Views
 {
@@ -43,36 +44,50 @@ namespace ProjectX_Frontend.Views
 
             if (data.Result.Length > 0 && data.Result != "false")
             {
-                /*
-                DataContext = new HomeView();
-                var viewModel = (UpdateViewCommand)DataContext;
-                if (viewModel.CanExecute(null))
-                    viewModel.Execute(null);
-                */
+                // Login accepted
 
 
                 JObject j = JObject.Parse(data.Result);
                 var resUsername = j["username"].ToString();
 
+                /*
+                Singleton singObject = Singleton.Instance;
+                singObject.id = j["id"];
+                singObject.Username = j["username"].ToString();
+                singObject.Password = j["password"].ToString();
+                singObject.Bio = j["bio"].ToString();
+                */
+
                 MainWindow MainWindow = new MainWindow();
 
                 MainWindow.ShowMenu();
-
-
-
-
             }
             else
             {
-                MainWindow MainWindow = new MainWindow();
                 MessageBox.Show("Login failed");
 
+
+
+
+
+                // UpdateViewCommand UpdateViewCommand = new UpdateViewCommand();
                 // UpdateViewCommand.ShowHome();
 
-                UpdateViewCommand updateViewCommand = new UpdateViewCommand();
-                UpdateViewCommand.Execute("Home");
+                // UpdateViewCommand = new UpdateViewCommand(this);
 
-                //viewModel.SelectedViewModel = new HomeViewModel();
+
+                // MainViewModel MainWiewModel = new MainWiewModel();
+
+
+                // UpdateViewCommand UpdateViewCommand = new UpdateViewCommand();
+                // UpdateViewCommand.Execute("Home");
+
+                // MainViewModel.UpdateViewCommand.Execute("Home");
+
+                //viewModel.SelectedViewModel = new HomeViewModel(); 
+
+
+
             }
         }
 

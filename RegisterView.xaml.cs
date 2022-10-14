@@ -63,5 +63,21 @@ namespace ProjectX_Frontend
 
             return response;
         }
+
+        static async Task<string> UpdateUser(string u, string p, string b)
+        {
+            string base_url = "https://localhost:7080/api";
+            var response = string.Empty;
+            var url = base_url + "/User";
+            User objectUser = new User(u, p, b);
+
+            var json = JsonConvert.SerializeObject(objectUser);
+            var postData = new StringContent(json, Encoding.UTF8, "application/json");
+            var client = new HttpClient();
+            HttpResponseMessage result = await client.PostAsync(url, postData);
+            response = await result.Content.ReadAsStringAsync();
+
+            return response;
+        }
     }
 }

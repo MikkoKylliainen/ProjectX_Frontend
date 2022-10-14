@@ -1,4 +1,5 @@
 ﻿using ProjectX_Frontend.Commands;
+using ProjectX_Frontend.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Windows.Input;
 
 namespace ProjectX_Frontend.Commands
@@ -36,6 +37,30 @@ namespace ProjectX_Frontend.Commands
 
         public void ShowHome ()
         {
+
+
+            //UpdateViewCommand = new UpdateViewCommand();
+            // UpdateViewCommand.Execute("Home");
+
+            // MainViewModel MainWiewModel = new MainWiewModel();
+
+
+            // UpdateViewCommand UpdateViewCommand = new UpdateViewCommand();
+            // UpdateViewCommand.Execute("Home");
+
+            // MainViewModel.UpdateViewCommand.Execute("Home");
+
+            //viewModel.SelectedViewModel = new HomeViewModel();
+
+
+            //viewModel.SelectedViewModel = new HomeViewModel();
+
+
+            // string testing = "Home";
+            // object obj = testing;
+
+            //this.UpdateViewCommand("Home");
+
             //viewModel.SelectedViewModel = new HomeViewModel();
 
             //UpdateViewCommand UpdateViewCommand = new UpdateViewCommand("Home");
@@ -43,8 +68,27 @@ namespace ProjectX_Frontend.Commands
             //object obj = testing;
             //Execute(obj);
         }
-        public void Execute(string parameter)
+        public void Execute(object parameter)
         {
+
+            switch (parameter.ToString())
+            {
+                case "Home":
+                    viewModel.SelectedViewModel = new HomeViewModel();
+                    break;
+
+                case "Account":
+                    viewModel.SelectedViewModel = new AccountViewModel();
+                    break;
+
+                case "Cat":
+                    viewModel.SelectedViewModel = new CatViewModel();
+                    break; 
+
+                default:
+                    break;
+            }
+            /*
             if(parameter.ToString() == "Home")
             {
                 viewModel.SelectedViewModel = new HomeViewModel();
@@ -57,6 +101,11 @@ namespace ProjectX_Frontend.Commands
             {
                 viewModel.SelectedViewModel = new LoginViewModel();
             }
+            else if (parameter.ToString() == "Cat")
+            {
+                viewModel.SelectedViewModel = new CatViewModel();
+            }
+            */
         }
     }
 }

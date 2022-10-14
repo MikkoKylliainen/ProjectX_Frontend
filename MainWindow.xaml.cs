@@ -30,6 +30,7 @@ namespace ProjectX_Frontend
             DataContext = new MainViewModel();
             menuHome.Visibility = Visibility.Collapsed;
             menuAccount.Visibility = Visibility.Collapsed;
+            menuCat.Visibility = Visibility.Collapsed;
         }
 
         public void ShowMenu()
@@ -41,6 +42,7 @@ namespace ProjectX_Frontend
             if (mainWindow != null)
                 mainWindow.menuHome.Visibility = Visibility.Visible;
                 mainWindow.menuAccount.Visibility = Visibility.Visible;
+                mainWindow.menuCat.Visibility = Visibility.Visible;
         }
         private void menuHome_MouseEnter(object sender, MouseEventArgs e)
         {
@@ -57,6 +59,14 @@ namespace ProjectX_Frontend
         private void menuAccount_MouseLeave(object sender, MouseEventArgs e)
         {
             menuAccount.Background = new SolidColorBrush(Color.FromArgb(255, 44, 125, 255));
+        }
+        private void menuCat_MouseEnter(object sender, MouseEventArgs e)
+        {
+            menuCat.Background = new SolidColorBrush(Color.FromArgb(255, 34, 52, 82));
+        }
+        private void menuCat_MouseLeave(object sender, MouseEventArgs e)
+        {
+            menuCat.Background = new SolidColorBrush(Color.FromArgb(255, 44, 125, 255));
         }
     }
 }
