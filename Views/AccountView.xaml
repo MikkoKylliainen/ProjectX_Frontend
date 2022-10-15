@@ -11,7 +11,7 @@
         <TextBlock HorizontalAlignment="Center" Margin="0,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" FontFamily="Global Sans Serif"><Run Text="Your Account"/><LineBreak/><Run/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="153,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" Height="32" FontSize="22" FontWeight="Bold"><Run Text="Username"/><LineBreak/><Run/></TextBlock>
         <TextBox x:Name="txtEditUsername" HorizontalAlignment="Left" Margin="151,120,0,0" VerticalAlignment="Top" Width="249" Background="White" BorderBrush="#FF464E90" FontSize="22"/>
-        <TextBlock HorizontalAlignment="Left" Margin="421,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" Height="32" FontSize="22" FontWeight="Bold"><Run Text="Password"/><LineBreak/><Run/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="412,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" Height="32" FontSize="22" FontWeight="Bold"><Run Text="Password"/><LineBreak/><Run/></TextBlock>
         <TextBox x:Name="txtEditPassword" HorizontalAlignment="Left" Margin="408,120,0,0" VerticalAlignment="Top" Width="258" Background="White" BorderBrush="#FF464E90" FontSize="22"/>
         <TextBlock HorizontalAlignment="Left" Margin="153,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" Height="32" FontSize="22" FontWeight="Bold"><Run Text="Biography"/><LineBreak/><Run/></TextBlock>
         <TextBox x:Name="txtEditBio" HorizontalAlignment="Left" Margin="151,213,0,0" VerticalAlignment="Top" Width="515" Background="White" BorderBrush="#FF464E90" FontSize="22" Height="98"/>

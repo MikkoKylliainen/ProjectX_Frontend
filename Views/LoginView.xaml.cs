@@ -46,48 +46,28 @@ namespace ProjectX_Frontend.Views
             {
                 // Login accepted
 
-
                 JObject j = JObject.Parse(data.Result);
                 var resUsername = j["username"].ToString();
-
-                /*
-                Singleton singObject = Singleton.Instance;
-                singObject.id = j["id"];
-                singObject.Username = j["username"].ToString();
-                singObject.Password = j["password"].ToString();
-                singObject.Bio = j["bio"].ToString();
-                */
 
                 MainWindow MainWindow = new MainWindow();
 
                 MainWindow.ShowMenu();
+
+                
+                Singleton singObject = Singleton.Instance;
+                singObject.Username = j["username"].ToString();
+                singObject.Password = j["password"].ToString();
+                singObject.Bio = j["bio"].ToString();
+
+                Singleton userData = Singleton.Instance;
+
+                Console.WriteLine("J: " + userData.Bio);
             }
             else
             {
+                // Login failed
+
                 MessageBox.Show("Login failed");
-
-
-
-
-
-                // UpdateViewCommand UpdateViewCommand = new UpdateViewCommand();
-                // UpdateViewCommand.ShowHome();
-
-                // UpdateViewCommand = new UpdateViewCommand(this);
-
-
-                // MainViewModel MainWiewModel = new MainWiewModel();
-
-
-                // UpdateViewCommand UpdateViewCommand = new UpdateViewCommand();
-                // UpdateViewCommand.Execute("Home");
-
-                // MainViewModel.UpdateViewCommand.Execute("Home");
-
-                //viewModel.SelectedViewModel = new HomeViewModel(); 
-
-
-
             }
         }
 

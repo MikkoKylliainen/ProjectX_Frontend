@@ -8,5 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="800" Background="White">
     <Grid>
         <TextBlock HorizontalAlignment="Center" Margin="0,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" FontFamily="Global Sans Serif"><Run Text="Have a random cat!"/><LineBreak/><Run/></TextBlock>
+        <Image x:Name="CatImage" Source="https://idsb.tmgrup.com.tr/ly/uploads/images/2021/09/08/thumbs/800x531/142774.jpg" Margin="0,73,0,21" />
+        <Button x:Name="btn_GetCat" Content="New Cat" HorizontalAlignment="Left" Margin="580,23,0,0" VerticalAlignment="Top"  FontSize="22" BorderBrush="#FF464E90" Width="117" Background="#FF262FAD" Foreground="White" Height="37" Click="btn_GetCat_Click"/>
     </Grid>
 </UserControl>

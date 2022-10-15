@@ -18,9 +18,6 @@ using ProjectX_Frontend;
 
 namespace ProjectX_Frontend
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -67,6 +64,11 @@ namespace ProjectX_Frontend
         private void menuCat_MouseLeave(object sender, MouseEventArgs e)
         {
             menuCat.Background = new SolidColorBrush(Color.FromArgb(255, 44, 125, 255));
+        }
+
+        private void menuAccount_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -88,24 +88,6 @@ namespace ProjectX_Frontend.Commands
                 default:
                     break;
             }
-            /*
-            if(parameter.ToString() == "Home")
-            {
-                viewModel.SelectedViewModel = new HomeViewModel();
-            }
-            else if(parameter.ToString() == "Account")
-            {
-                viewModel.SelectedViewModel = new AccountViewModel();
-            }
-            else if (parameter.ToString() == "Login")
-            {
-                viewModel.SelectedViewModel = new LoginViewModel();
-            }
-            else if (parameter.ToString() == "Cat")
-            {
-                viewModel.SelectedViewModel = new CatViewModel();
-            }
-            */
         }
     }
 }

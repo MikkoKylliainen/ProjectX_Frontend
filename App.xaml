@@ -12,8 +12,11 @@
         <DataTemplate DataType="{x:Type viewmodels:AccountViewModel}">
             <views:AccountView/>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:CatViewModel}">
+            <views:CatView/>
+        </DataTemplate>
         <DataTemplate DataType="{x:Type viewmodels:LoginViewModel}">
             <views:LoginView/>
-        </DataTemplate>        
+        </DataTemplate>
     </Application.Resources>
 </Application>

@@ -18,22 +18,22 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ProjectX_Frontend.Views
 {
-    /// <summary>
-    /// Interaction logic for AccountView.xaml
-    /// </summary>
     public partial class AccountView : UserControl
     {
         public AccountView()
         {
             InitializeComponent();
+
+            Singleton userData = Singleton.Instance;
+            Console.WriteLine("Hiho: " + userData.Bio);
+
+            txtEditUsername.Text = userData.Username;
+            txtEditBio.Text = userData.Bio;
         }
 
         private void btnSaveChanges_Click(object sender, RoutedEventArgs e)
         {
-            // User objectUser = new User(u, p, b);
-
-            MessageBox.Show("U ");
-
+            //Send user update
         }
     }
 }
