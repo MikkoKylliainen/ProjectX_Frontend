@@ -12,9 +12,6 @@ namespace ProjectX_Frontend.Commands
 {
     public class UpdateViewCommand : ICommand
     {
-        public UpdateViewCommand()
-        {
-        }
         private MainViewModel viewModel;
         private string v;
 
@@ -37,40 +34,10 @@ namespace ProjectX_Frontend.Commands
 
         public void ShowHome ()
         {
-
-
-            //UpdateViewCommand = new UpdateViewCommand();
-            // UpdateViewCommand.Execute("Home");
-
-            // MainViewModel MainWiewModel = new MainWiewModel();
-
-
-            // UpdateViewCommand UpdateViewCommand = new UpdateViewCommand();
-            // UpdateViewCommand.Execute("Home");
-
-            // MainViewModel.UpdateViewCommand.Execute("Home");
-
-            //viewModel.SelectedViewModel = new HomeViewModel();
-
-
-            //viewModel.SelectedViewModel = new HomeViewModel();
-
-
-            // string testing = "Home";
-            // object obj = testing;
-
-            //this.UpdateViewCommand("Home");
-
-            //viewModel.SelectedViewModel = new HomeViewModel();
-
-            //UpdateViewCommand UpdateViewCommand = new UpdateViewCommand("Home");
-            //string testing = "Home";
-            //object obj = testing;
-            //Execute(obj);
+            MessageBox.Show("moi");
         }
         public void Execute(object parameter)
         {
-
             switch (parameter.ToString())
             {
                 case "Home":

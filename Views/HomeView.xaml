@@ -8,5 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="800" Background="White">
     <Grid>
         <TextBlock HorizontalAlignment="Center" Margin="0,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" FontFamily="Global Sans Serif"><Run Text="Home"/><LineBreak/><Run/></TextBlock>
+        <ListBox x:Name="TournamentList" BorderThickness='4' Width="700" Margin='50,97,50,58' BorderBrush="#FFBBC0FF"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,65,0,0" TextWrapping="Wrap" Text="2022 Snooker Tournaments" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
     </Grid>
 </UserControl>

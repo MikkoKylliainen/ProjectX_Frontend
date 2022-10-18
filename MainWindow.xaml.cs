@@ -32,9 +32,6 @@ namespace ProjectX_Frontend
 
         public void ShowMenu()
         {
-
-            // BLLIB-message toimii mutta ei visibility? TSEKKAA TÄÄ MAINWINDOW
-
             var mainWindow = App.Current.Windows.OfType<MainWindow>().FirstOrDefault();
             if (mainWindow != null)
                 mainWindow.menuHome.Visibility = Visibility.Visible;
@@ -65,7 +62,6 @@ namespace ProjectX_Frontend
         {
             menuCat.Background = new SolidColorBrush(Color.FromArgb(255, 44, 125, 255));
         }
-
         private void menuAccount_Click(object sender, RoutedEventArgs e)
         {
 

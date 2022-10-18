@@ -22,6 +22,7 @@ using System.Windows.Markup;
 using ProjectX_Frontend;
 using ProjectX_Frontend.Commands;
 using ProjectX_Frontend.ViewModels;
+using ProjectX_Frontend.Views;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace ProjectX_Frontend.Views
@@ -50,26 +51,23 @@ namespace ProjectX_Frontend.Views
                 var resUsername = j["username"].ToString();
 
                 MainWindow MainWindow = new MainWindow();
-
                 MainWindow.ShowMenu();
 
-                
                 Singleton singObject = Singleton.Instance;
                 singObject.Username = j["username"].ToString();
                 singObject.Password = j["password"].ToString();
                 singObject.Bio = j["bio"].ToString();
 
                 Singleton userData = Singleton.Instance;
-
-                Console.WriteLine("J: " + userData.Bio);
             }
             else
             {
                 // Login failed
 
                 MessageBox.Show("Login failed");
+
             }
-        }
+}
 
         static async Task<string> LoginUser(string u, string p)
         {
